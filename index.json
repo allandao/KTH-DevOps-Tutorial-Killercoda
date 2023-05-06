@@ -1,0 +1,24 @@
+{
+  "title": "GitGuardian Tutorial",
+  "description": "Learn how to use GitGuardian. A tutorial by Allan and Jun",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Installation",
+        "text": "step1.md",
+        "verify": "verify.sh"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  },
+  "interface": {
+    "layout": "ide"
+  }
+}
