@@ -9,9 +9,19 @@ First, create a new file in juice-shop:
 
 `cd /root/`{{exec}}
 
+Create a file named test.js:
 `touch test.js`{{exec}}
 
-Paste the following code in test.js, the file you created:
+Technically we didn't need the step before this :). Anyways, use this command insert some sample code:
+`echo -e "console.log(\"Testing. 1 2 3.\")
+console.log(\"Hello\")
+console.log(\"KTH\")
+console.log(\"DevOps\")
+console.log(\"world\")
+console.log(\".\")" > test.js`{{exec}}
+
+The following code should be in test.js, the file you created:
+
 ```javascript
 console.log("Testing. 1 2 3.")
 console.log("Hello")
@@ -19,7 +29,13 @@ console.log("KTH")
 console.log("DevOps")
 console.log("world")
 console.log(".")
-```
+
+let a = 1;
+let b = a;
+if (a == b) {
+	console.log("68747470733a2f2f6769746875622e636f6d2f4b54482f6465766f70732d636f75727365");
+}
+````
 
 Now, let's run a sample pattern:
 
@@ -34,7 +50,11 @@ Another example:
 
 `semgrep -e "if (...) ..." -l javascript "/root/test.js"`{{exec}}
 
-The piece of text you have identified within the if statement found is what we think to be the best GitHub repo around. Hint: it is hex code...
+Above, we have two examples using ellipses ("..."). We can think of ellipses as pattern matching for any valid pieces of text, from strings to assignments to methods calls. It is impacted by indentation and also depth in certain patterns, and in some cases each ellipse can typically show up to 10 pieces of concurrent text (think new line or perhaps space seperated) that match. For example, in the if statement above, we match the general form of an if statement and return whole if statement, with its contents. If the if statement is too long, then the message `[hid X additional lines, adjust with --max-lines-per-finding]` will appear.
+
+### Easter Egg
+
+The piece of text you have identified within the if statement is what we think to be the coolest GitHub repo around. Hint: it is hex code...
 
 ### Semgrep Documentation
 
