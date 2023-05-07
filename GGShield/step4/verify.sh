@@ -1,3 +1,3 @@
 #!/bin/bash
 
-stat /juice-shop/test.js
+stat root/test.js

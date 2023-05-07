@@ -9,4 +9,4 @@ This is also helpful if you don't have Semgrep installed.
 
 `docker run --rm -v "$(pwd)/juice-shop:/src" returntocorp/semgrep semgrep --config p/security-audit /src`{{exec}}
 
-Very nice X2!
+Again, very nice! Make sure to note what the differences are, if any, when you had used the semgrep cli.

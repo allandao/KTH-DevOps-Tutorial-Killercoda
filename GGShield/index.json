@@ -14,9 +14,19 @@
         "verify": "step1-install/verify.sh"
       },
       {
-        "title": "Installation",
+        "title": "Try Semgrep",
         "text": "step2/step.md",
         "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Try Semgrep as a Docker Image",
+        "text": "step3/step.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Try Semgrep Patterns",
+        "text": "step4/step.md",
+        "verify": "step4/verify.sh"
       }
     ]
   },
