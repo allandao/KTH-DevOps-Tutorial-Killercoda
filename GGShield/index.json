@@ -1,6 +1,6 @@
 {
-  "title": "GitGuardian Tutorial",
-  "description": "Learn how to use GitGuardian. A tutorial by Allan and Jun",
+  "title": "Semgrep Tutorial",
+  "description": "Learn how to use Semgrep. A tutorial by Allan",
   "details": {
     "intro": {
       "text": "intro.md",
@@ -10,8 +10,13 @@
     "steps": [
       {
         "title": "Installation",
-        "text": "step1.md",
-        "verify": "verify.sh"
+        "text": "step1-install/step.md",
+        "verify": "step1-install/verify.sh"
+      },
+      {
+        "title": "Installation",
+        "text": "step2/step.md",
+        "verify": "step2/verify.sh"
       }
     ]
   },
