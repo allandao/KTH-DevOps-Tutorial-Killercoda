@@ -27,6 +27,10 @@
         "title": "Try Semgrep Patterns",
         "text": "step4/step.md",
         "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Conclusion",
+        "text": "conclusion/step.md",
       }
     ]
   },

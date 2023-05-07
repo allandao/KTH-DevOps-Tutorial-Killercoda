@@ -39,13 +39,13 @@ The piece of text you have identified within the if statement found is what we t
 ### Semgrep Documentation
 
 Now we suggest you to experiment further! For more information on patterns, find out more here: 
+
 https://semgrep.dev/docs/writing-rules/pattern-syntax/
+
 https://semgrep.dev/docs/writing-rules/pattern-examples/
 
 For more information about rules, which are helpful for ensuring our patterns are no longer one time use via a command, check out these links:
+
 https://semgrep.dev/docs/writing-rules/generic-pattern-matching/
+
 https://semgrep.dev/docs/writing-rules/rule-syntax/
-
-### Conclusion
-
-Great! We hope you've enjoyed this concise tutorial on Semgrep and seen how easy it is to use. The goal of Semgrep is to be lightweight and based in the command line so you can easily use it without context switching and thus be more efficient. In addition, it inherently was built as an efficient and thus quick tool, meaning shorter runtime times and thus shorter pipeline runs. No more excuses regarding insecure code as a DevOps engineer!
