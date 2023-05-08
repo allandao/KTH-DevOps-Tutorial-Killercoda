@@ -19,4 +19,4 @@ We'll focus on how to use Semgrep in the command line. Unlike other tools that r
 Semgrep is actively being developed, and Dockerfile and YAML are marked as languages being experimented with. This means there is some level of support, but many bugs will be present. They are actively looking for support! In any case, Semgrep also having the ability to be used as a Docker image helps you create more secure applications through automated static analysis scanning alongside the scanning of your pipeline files in the near future, given successful ongoing development!
 
 ### Tutorial Diagram
-![Diagram](./tutorial-flowchart.png)
+![Diagram](./assets/tutorial-flowchart.png)
