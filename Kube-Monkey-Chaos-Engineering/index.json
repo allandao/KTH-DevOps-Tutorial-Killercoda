@@ -1,0 +1,24 @@
+{
+  "title": "Kubes-Monkey Demo",
+  "description": "See how to use Kubes-Monkey, plus the tool in action",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "foreground": "foreground.sh",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Installation",
+        "text": "step1-install/step.md",
+        "verify": "step1-install/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
