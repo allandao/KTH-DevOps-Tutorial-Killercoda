@@ -28,11 +28,19 @@ helm install hello-node kubemonkey --set config.dryRun=false
 k get pod -A
 kubectl get pod -A
 
-helm install kube-system kubemonkey \
+helm install test kubemonkey/kube-monkey \
                --set config.dryRun=true \
-               --set config.runHour=21 \
-               --set config.startHour=21 \
-               --set config.endHour=21.05
+               --set config.runHour=2.75 \
+               --set config.startHour=3 \
+               --set config.endHour=3.03 \
+               --set config.timeZone=Europe/Stockholm
+
+0.03333 = 2/60
+kube-monkey runs at a pre-configured hour (run_hour, defaults to 8 am) on weekdays, and builds a schedule of deployments that will face a random Pod death sometime during the same day. The time-range during the day when the random pod Death might occur is configurable and defaults to 10 am to 4 pm.
+
+config.timeZone 	time zone in DZ format
+ 	Europe/Stockholm
+ https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 helm repo update
 helm show all kubemonkey

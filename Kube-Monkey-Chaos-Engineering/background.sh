@@ -18,6 +18,7 @@ echo Starting... # to test stdout output in /var/log/killercoda
 # Kube-Monkey --
 helm repo add kubemonkey https://asobti.github.io/kube-monkey/charts/repo
 helm repo update
+# TODO UPDATE my-release release name
 helm install my-release kubemonkey/kube-monkey --version 1.5.0
 # Example k8s deployment
 kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agnhost:2.39 -- /agnhost netexec --http-port=8080
