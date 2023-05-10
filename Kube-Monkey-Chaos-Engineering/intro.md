@@ -32,7 +32,7 @@ helm install test kubemonkey/kube-monkey \
                --set config.dryRun=true \
                --set config.runHour=2.75 \
                --set config.startHour=3 \
-               --set config.endHour=3.03 \
+               --set config.endHour=4 \
                --set config.timeZone=Europe/Stockholm
 
 0.03333 = 2/60
