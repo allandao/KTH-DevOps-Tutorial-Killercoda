@@ -10,8 +10,8 @@
     "steps": [
       {
         "title": "Installation",
-        "text": "step1-install/step.md",
-        "verify": "step1-install/verify.sh"
+        "text": "step1/step.md",
+        "verify": "step1/verify.sh"
       }
     ],
     "finish": {
