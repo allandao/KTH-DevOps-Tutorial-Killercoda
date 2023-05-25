@@ -7,20 +7,20 @@ https://github.com/asobti/kube-monkey/blob/master/helm/kubemonkey/README.md
 Configuration of Kube-Monkey:
 ```
 helm repo add kubemonkey https://asobti.github.io/kube-monkey/charts/repo
-```
+```{{exec}}
 
 ```
 helm repo update
-```
+```{{exec}}
 
 kube-monkey has a variety of flags. Here's an example installation:
 ```
 helm install CHART_NAME_HERE kubemonkey/kube-monkey \
->       --set config.dryRun=true \
->       --set config.runHour=3 \
->       --set config.startHour=4 \
->       --set config.endHour=5 \
->       --set config.timeZone=Etc/UTC
+       --set config.dryRun=true \
+       --set config.runHour=3 \
+       --set config.startHour=4 \
+       --set config.endHour=5 \
+       --set config.timeZone=Etc/UTC
 ```
 
 ### Time Zones

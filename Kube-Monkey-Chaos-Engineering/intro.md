@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to a qucik intro of kube-monkey, a chaos engineering tool implemented for Kubernetes clusters.
+Welcome to a quick intro of kube-monkey, a chaos engineering tool implemented for Kubernetes clusters.
 
 From the repository:
 
@@ -15,13 +15,9 @@ Killercoda is fantastic platform that lets us easily configure and create an env
 
 On the right, you can find a code editor, or tabs which are simply terminal environments.
 
-
-
-If you want to change the time kube-monkey wakes up and start and end killing pods.
-
-helm install hello-node kubemonkey --set config.dryRun=false
-
 ---- 
 
 kube-monkey runs at a pre-configured hour (run_hour, defaults to 8 am) on weekdays, and builds a schedule of deployments that will face a random Pod death sometime during the same day. The time-range during the day when the random pod Death might occur is configurable and defaults to 10 am to 4 pm.
+
+You are able to change the time kube-monkey wakes up and start and end killing pods.
 

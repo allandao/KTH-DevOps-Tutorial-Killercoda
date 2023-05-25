@@ -4,6 +4,7 @@
 ## Experimenting with Time Manipulation
 
 Setting the date. Notice we're on a 24 hour clock:
+
 ```
 sudo date --set="DD MM YYYY HH:MM:SS"
 
@@ -13,6 +14,7 @@ sudo date --set=05/12/23
 sudo date --set="11 May 2023 14:59:55"
 sudo date --set="2 Oct 2002 18:00:00"
 ```
+
 ```
 Results:
 controlplane $ sudo date --set="11 May 2023 14:59:55"
@@ -26,14 +28,18 @@ You'll notice the date might not change:
 Run this to see processes in place that might be responsible for that.
 ```
 ps -ef
-```
-We notice a few things we might want to shut down.
+```{{exec}}
+
+You may notice a few things we might want to shut down.
+
 ```
 systemctl stop systemd-timesyncd
-```
+```{{exec}}
+
 ```
 timedatectl set-ntp false
-```
+```{{exec}}
+
 Give them a try and seeing if the date changing works now. Running ``` date ``` will show you the current system date.
 
 A helpful command:
@@ -79,9 +85,10 @@ CHART_NAME      default         1               2023-05-10 14:14:41.981401326 +0
 
 Recall the hours we set, and imagine the day and time today is currently 9:00 on January 10th, 2023:
 ```
->       --set config.runHour=3 \
->       --set config.startHour=4 \
->       --set config.endHour=5 \
+Command Flags
+      --set config.runHour=3 \
+      --set config.startHour=4 \
+      --set config.endHour=5 \
 
 Sample Output:
 controlplane $ kubectl logs -f deployment.apps/kube-monkey-test -n default
@@ -89,19 +96,29 @@ I0511 03:04:06.252923       1 config.go:102] Successfully validated configs
 I0511 03:04:06.252976       1 main.go:54] Starting kube-monkey with v logging level 5 and local log directory /var/log/kube-monkey
 I0511 03:04:06.262677       1 kubemonkey.go:25] Status Update: Generating next schedule at 2023-01-11 03:00:00 +0000 UTC
 ```
+
 Since 9:00 is past hour 3 which is when kube-monkey will initially run, it will schedule itself for the next day. Let's jump to the next day to see the scheduled plan: 
+
 ```
 sudo date --set="1 Jan 2023 2:59:55"
-```
+```{{exec}}
+
 Let us wait a few seconds, and then check the logs again!
+
 ```
 kubectl logs -f deployment.apps/CHART-NAME -n NAMESPACE
 ```
+
 Now you should be able to see a plan. Use the date command to now skip to the scheduled time for any planned disruptions!
 
 -----
 
-Sample Commands from the docs:
+Sample Commands (some from the docs):
+
+If you want pods to actually be taken down:
+
+`helm install hello-node kubemonkey --set config.dryRun=false`{{exec}}
+
 
 `helm install --name hello-node kubemonkey \
                --set config.dryRun=false \
