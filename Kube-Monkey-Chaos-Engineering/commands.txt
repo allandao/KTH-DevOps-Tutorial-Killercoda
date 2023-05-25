@@ -1,0 +1,20 @@
+# If needed
+# helm repo add kubemonkey https://asobti.github.io/kube-monkey/charts/repo
+# helm repo update
+
+helm install kube-monkey-test kubemonkey/kube-monkey \
+               --set config.dryRun=true \
+               --set config.runHour=3 \
+               --set config.startHour=4 \
+               --set config.endHour=5 \
+               --set config.timeZone=Etc/UTC
+# tz Europe/Stockholm
+
+#sudo date --set=2:59:50
+#sudo date --date=05/12/23
+sudo date --set="11 May 2023 02:59:55"
+# sudo date --set="11 May 2023 14:59:55"  # Ignore, we don't want to set UTC time
+date
+
+kubectl -n default rollout status deployment kube-monkey-test
+kubectl logs -f deployment.apps/kube-monkey-test -n default

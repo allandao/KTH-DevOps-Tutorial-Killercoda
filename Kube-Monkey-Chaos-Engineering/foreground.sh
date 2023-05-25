@@ -1,3 +1,4 @@
+#!/bin/bash
 echo "Preparing scenario..."
 while [ ! -f /tmp/finished ]
 kubectl version --client

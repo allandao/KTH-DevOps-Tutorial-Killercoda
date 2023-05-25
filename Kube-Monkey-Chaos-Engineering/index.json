@@ -1,6 +1,6 @@
 {
-  "title": "Kubes-Monkey Demo",
-  "description": "See how to use Kubes-Monkey, plus the tool in action",
+  "title": "Kube-Monkey",
+  "description": "Experimenting with Kube-Monkey",
   "details": {
     "intro": {
       "text": "intro.md",
